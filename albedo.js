@@ -1206,13 +1206,13 @@ case 'antilink':
                     await sleep(1500)
                     let btn = [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot/Koleksibot'
+                                    displayText: 'GITHUB ME',
+                                    url: https://github.com/koleksibot/whitehatbot-md'
                                 }
                             }, {
                                 callButton: {
                                     displayText: 'Owner Number👤',
-                                    phoneNumber: '+92 308-7880-256'
+                                    phoneNumber: '+6289363918181'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1231,7 +1231,7 @@ case 'antilink':
                                 }
                             }]
                       fatihgans = fs.readFileSync('./Media/astapic.jpg')
-                      let txt = `「 Asta Broadcast 」\n\n${text}`
+                      let txt = `「 Iklan Bot 」\n\n${text}`
                       NexusNwInc.send5ButImg(i, txt, NexusNwInc.user.name, fatihgans, btn)
                     }
                 reply(`Successful Sending Broadcast To ${anu.length} Group(s)`)
@@ -1247,7 +1247,7 @@ case 'antilink':
 		    let btn = [{
                                 urlButton: {
                                     displayText: 'Script🔖',
-                                    url: 'https://github.com/Koleksibot/Koleksibot'
+                                    url: 'https://github.com/koleksibot/whitehatbot-md/'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -1256,7 +1256,7 @@ case 'antilink':
                                 }
                             }]
                       fatihgans = fs.readFileSync('./Media/astapic.jpg')
-                      let txt = `「 Asta Broadcast 」\n\n${text}`
+                      let txt = `「 Iklan Bot 」\n\n${text}`
                       NexusNwInc.send5ButImg(yoi, txt, `Broadcast By ${global.pengguna}`, fatihgans, btn)
 		}
 		reply('Broadcast Success')
@@ -1533,7 +1533,7 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                             hydratedFooterText: `Playing To ${text}`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: '🥬Video Source Link🥬',
+                                    displayText: 'Video Source Link',
                                     url: `${anu.url}`
                                 }
                             }, {
@@ -1781,75 +1781,6 @@ message = await prepareWAMessageMedia({ image : { url: anu.thumbnail } }, { uplo
                 let anu = await primbon.shio(text)
                 if (anu.status == false) return reply(anu.message)
                 NexusNwInc.sendText(m.chat, `⭔ *Results :* ${anu.message}`, m)
-            }
-            break
-	        case 'tiktok': case 'tiktoknowm': {
-                if (!text) throw 'Enter Query Link!'
-                replay(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '💁🏻‍♂️With Watermark🤔'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.nowatermark },
-                    caption: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                NexusNwInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'tiktokwm': case 'tiktokwatermark': {
-                if (!text) throw 'Enter Query Link!'
-                replay(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '🎥Video🎥'}, type: 1},
-                    {buttonId: `tiktokmp3 ${text}`, buttonText: {displayText: '🎵Audio🎵'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video: { url: anu.result.watermark },
-                    caption: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 5
-                }
-                NexusNwInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-            }
-            break
-            case 'tiktokmp3': case 'tiktokaudio': {
-                if (!text) throw 'Enter Query Link!'
-                replay(mess.wait)
-                let anu = await fetchJson(api('zenz', '/downloader/tiktok', { url: text }, 'apikey'))
-                let buttons = [
-                    {buttonId: `tiktoknowm ${text}`, buttonText: {displayText: '💁🏻‍♂️No Watermark💁🏻‍♂️'}, type: 1},
-                    {buttonId: `tiktokwm ${text}`, buttonText: {displayText: '👀With Watermark👀'}, type: 1}
-                ]
-                let buttonMessage = {
-                    text: `Download From ${text}`,
-                    footer: 'Press The Button Below',
-                    buttons: buttons,
-                    headerType: 2
-                }
-                let msg = await NexusNwInc.sendMessage(m.chat, buttonMessage, { quoted: m })
-		let { toAudio } = require('./lib/converter')
-		let nganu = await getBuffer(anu.result.nowatermark)
-		let cnvrt = await toAudio(nganu, 'mp4')
-                NexusNwInc.sendMessage(m.chat, { audio: cnvrt, mimetype: 'audio/mpeg'}, { quoted: msg })
-            }
-            break
-	        case 'instagram': case 'ig': case 'igdl': {
-                if (!text) throw 'Enter Query Url!'
-                replay(mess.wait)
-                if (/(?:\/p\/|\/reel\/|\/tv\/)([^\s&]+)/.test(isUrl(text)[0])) {
-                    let anu = await fetchJson(api('zenz', '/downloader/instagram2', { url: isUrl(text)[0] }, 'apikey'))
-                    for (let media of anu.data) NexusNwInc.sendMedia(m.chat, media, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
-                } else if (/\/stories\/([^\s&]+)/.test(isUrl(text)[0])) {
-                    let anu = await fetchJson(api('zenz', '/downloader/instastory', { url: isUrl(text)[0] }, 'apikey'))
-                    NexusNwInc.sendMedia(m.chat, anu.media[0].url, '', `Download Url Instagram From ${isUrl(text)[0]}`, m)
-                }
             }
             break
             case 'joox': case 'jooxdl': {
@@ -2175,7 +2106,7 @@ View list of message with ${prefix}listmsg`)
 				let buttons = [{
                                 urlButton: {
                                     displayText: 'Report Bug🐛',
-                                    url: 'https://wa.me/923087880256?text=hello+bro+i+found+a+bug+in+your+bot'
+                                    url: 'https://wa.me/6289536918181?text=hello+bro+i+found+a+bug+in+your+bot'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2380,7 +2311,7 @@ reply(`Successfully Reported To The Owner\n\nPlease Make Sure The Bug Is Valid, 
                     break 
 case 'tes': case 'test': case 'alive': case 'bot': case 'robot': case 'cheems': case 'asta':{
                 anu = `Hi ${pushname}
-Asta With You Forever!! 👻🤚`
+Bro With You Forever!! 👻🤚`
 const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                     templateMessage: {
                         hydratedTemplate: {
@@ -2390,13 +2321,13 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
                             	urlButton: {
                                 displayText: 'Script🔖',
-                                    url: 'https://github.com/Koleksibot/Koleksibot'
+                                    url: 'https://github.com/koleksibot/whitehatbot-md'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2495,7 +2426,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Ohayo🤚 ${pushname}
+                            hydratedFooterText: `Hi Onichan🤚 ${pushname}
 How Are You? 😊
 
 
@@ -2514,7 +2445,7 @@ Please Select Button Below
 `,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2547,7 +2478,7 @@ break
 case 'command':{
 let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                 listMessage :{
-                    title: `Konichiwa  ${pushname}`,
+                    title: `Hi  ${pushname}`,
                     description: `Please Choose The Menu\n\n`,
                     buttonText: "Menu",
                     footerText: "_LulzGhost-Team_",
@@ -2684,7 +2615,7 @@ case 'grupmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2703,13 +2634,6 @@ case 'downloadmenu': {
 	okemenu = `
 	*Downloader Menu*
   
-  ➙ ${prefix}tiktoknowm [url]
-  ➙ ${prefix}tiktokwm [url]
-  ➙ ${prefix}tiktokmp3 [url]
-  ➙ ${prefix}instagram [url]
-  ➙ ${prefix}ig2 [url]
-  ➙ ${prefix}igreels [url]
-  ➙ ${prefix}igtv [url]
   ➙ ${prefix}twitter [url]
   ➙ ${prefix}twittermp3 [url]
   ➙ ${prefix}ytmp3 [url]
@@ -2726,7 +2650,7 @@ case 'downloadmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2763,7 +2687,7 @@ case 'downloadmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2794,7 +2718,7 @@ case 'randommenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2826,7 +2750,7 @@ case 'funmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2866,7 +2790,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2900,7 +2824,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2958,7 +2882,7 @@ case 'horoscopemenukcodk': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -2996,7 +2920,7 @@ case 'convertmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3036,7 +2960,7 @@ case 'nocategorymenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3073,7 +2997,7 @@ case 'databasemenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3105,7 +3029,7 @@ case 'anonymouschatmenu': {
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3137,7 +3061,7 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3174,7 +3098,7 @@ break
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'profile📍',
+                                    displayText: 'GITHUB ME',
                                     url: 'https://github.com/Koleksibot'
                                 }
                             }, {
@@ -3193,7 +3117,7 @@ break
   	anu = `
   *All Menu*
   
-  ꪶ🐕Group Menu🐕ꫂ
+  ꪶ🌹Group Menu🌹ꫂ
   ➙ ${prefix}grouplink
   ➙ ${prefix}ephemeral [option]
   ➙ ${prefix}setgrouppp
@@ -3206,14 +3130,7 @@ break
   ➙ ${prefix}promote @user
   ➙ ${prefix}demote @user
   
-  ꪶ🐕Download Menu🐕ꫂ
-  ➙ ${prefix}tiktoknowm [url]
-  ➙ ${prefix}tiktokwm [url]
-  ➙ ${prefix}tiktokmp3 [url]
-  ➙ ${prefix}instagram [url]
-  ➙ ${prefix}ig2 [url]
-  ➙ ${prefix}igreels [url]
-  ➙ ${prefix}igtv [url]
+  ꪶ🌹Download Menu🌹ꫂ
   ➙ ${prefix}twitter [url]
   ➙ ${prefix}twittermp3 [url]
   ➙ ${prefix}ytmp3 [url]
@@ -3221,7 +3138,7 @@ break
   ➙ ${prefix}getmusic [query]
   ➙ ${prefix}getvideo [query
   
-  ꪶ🐕Search Menu🐕ꫂ
+  ꪶ🌹Search Menu🌹ꫂ
   ➙ ${prefix}play [query]
   ➙ ${prefix}yts [query]
   ➙ ${prefix}google [query]
@@ -3231,16 +3148,16 @@ break
   ➙ ${prefix}wikimedia [query]
   ➙ ${prefix}ytsearch [query]
   
-  ꪶ🐕Random Menu🐕ꫂ
+  ꪶ🌹Random Menu🌹ꫂ
   ➙ ${prefix}coffee
   ➙ ${prefix}couplepp
   
-  ꪶ🐕Fun Menu🐕ꫂ
+  ꪶ🌹Fun Menu🌹ꫂ
   ➙ ${prefix}couple
   ➙ ${prefix}mysoulmate
   ➙ ${prefix}math [mode]  
   
-  ꪶ🐕Voice Changer Menu🐕ꫂ
+  ꪶ🌹Voice Changer Menu🌹ꫂ
   ➙ ${prefix}bass
   ➙ ${prefix}blown
   ➙ ${prefix}deep
@@ -3253,7 +3170,7 @@ break
   ➙ ${prefix}slow
   ➙ ${prefix}squirrel
    
-  ꪶ🐕Convert Menu🐕ꫂ
+  ꪶ🌹Convert Menu🌹ꫂ
   ➙ ${prefix}toimage
   ➙ ${prefix}removebg
   ➙ ${prefix}sticker
@@ -3264,7 +3181,7 @@ break
   ➙ ${prefix}ebinary
   ➙ ${prefix}dbinary
   
-  ꪶ🐕Misc Menu🐕ꫂ
+  ꪶ🌹Misc Menu🌹ꫂ
   ➙ ${prefix}ping
   ➙ ${prefix}owner
   ➙ ${prefix}donate
@@ -3277,7 +3194,7 @@ break
   ➙ ${prefix}listonline
   ➙ ${prefix}report (report bug to owner)
   
-  ꪶ🐕Database Menu🐕ꫂ
+  ꪶ🌹Database Menu🌹ꫂ
   ➙ ${prefix}setcmd
   ➙ ${prefix}listcmd
   ➙ ${prefix}delcmd
@@ -3287,17 +3204,17 @@ break
   ➙ ${prefix}getmsg
   ➙ ${prefix}delmsg
   
-  ꪶ🐕Anonymous Menu🐕ꫂ
+  ꪶ🌹Anonymous Menu🌹ꫂ
   ➙ ${prefix}start ( Start Chat )
   ➙ ${prefix}next ( Next user )
   ➙ ${prefix}stop ( stop Anonymous chat )
   
-  ꪶ🐕System Menu🐕ꫂ
+  ꪶ🌹System Menu🌹ꫂ
   ➙ ${prefix}antilink On/Off
   ➙ ${prefix}mute On/Off
   ➙ ${prefix}antiwame On/Off
   
-  ꪶ🐕Owner Menu🐕ꫂ
+  ꪶ🌹Owner Menu🌹ꫂ
   ➙ ${prefix}chat [option]
   ➙ ${prefix}join [link]
   ➙ ${prefix}leave
@@ -3315,8 +3232,8 @@ break
                             hydratedFooterText: `LulzGhost-Team`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'profile📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Join My Whatsapp Bot',
+                                    url: 'https://chat.whatsapp.com/J4ii7zkiySP9s6xdlZDggp'
                                 }
                             }, {
                                 quickReplyButton: {
