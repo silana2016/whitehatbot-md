@@ -18,7 +18,7 @@ global.APIs = {
 }
 //═══════[api key of the website]════════\\
 global.APIKeys = {
-	'https://zenzapi.xyz': 'd6295ca53e', //Change This API KEY 
+	'https://zenzapis.xyz': 'B6084A1B49', //Change This API KEY 
 }
 
 //═══════[modification]════════\\
