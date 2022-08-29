@@ -2176,7 +2176,7 @@ View list of message with ${prefix}listmsg`)
 				let buttons = [{
                                 urlButton: {
                                     displayText: 'Report Bug🐛',
-                                    url: 'https://wa.me/923087880256?text=hello+bro+i+found+a+bug+in+your+bot'
+                                    url: 'https://wa.me/62895327934887?text=hello+bro+i+found+a+bug+in+your+bot'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2388,16 +2388,16 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                             	urlButton: {
                                 displayText: 'Script🔖',
-                                    url: 'https://github.com/Koleksibot/Whitehatbot-md'
+                                    url: 'https://github.com/krizynofc'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2515,13 +2515,13 @@ Please Select Button Below
 `,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                             	urlButton: {
                                 displayText: 'Script🔖',
-                                    url: 'https://github.com/Koleksibot/Whitehatbot-md'
+                                    url: 'https://github.com/krizynofc'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2551,7 +2551,7 @@ let template = await generateWAMessageFromContent(m.chat, proto.Message.fromObje
                     title: `Konichiwa  ${pushname}`,
                     description: `Please Choose The Menu\n\n`,
                     buttonText: "Menu",
-                    footerText: "_Koleksibot_",
+                    footerText: "Àimò Shuǐ By KrizynOfc",
                     listType: "SINGLE_SELECT",
                     sections: [{
 								"title": "Group Features",
@@ -2682,11 +2682,11 @@ case 'grupmenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2724,11 +2724,11 @@ case 'downloadmenu': {
                             hydratedContentText: okemenu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2761,11 +2761,11 @@ case 'downloadmenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2792,11 +2792,11 @@ case 'randommenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2824,11 +2824,11 @@ case 'funmenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2864,11 +2864,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2898,11 +2898,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2956,11 +2956,11 @@ case 'horoscopemenukcodk': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -2994,11 +2994,11 @@ case 'convertmenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3034,11 +3034,11 @@ case 'nocategorymenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3071,11 +3071,11 @@ case 'databasemenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3103,11 +3103,11 @@ case 'anonymouschatmenu': {
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3135,11 +3135,11 @@ const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'Profile 📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3172,11 +3172,11 @@ break
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'profile📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
@@ -3313,11 +3313,11 @@ break
                             hydratedContentText: anu,
                             locationMessage: {
                             jpegThumbnail: fs.readFileSync('./Media/astapic.jpg')},
-                            hydratedFooterText: `Koleksibot`,
+                            hydratedFooterText: `Àimò Shuǐ By KrizynOfc`,
                             hydratedButtons: [{
                                 urlButton: {
-                                    displayText: 'profile📍',
-                                    url: 'https://github.com/Koleksibot'
+                                    displayText: 'Website',
+                                    url: 'https://lynk.id/kri.com'
                                 }
                             }, {
                                 quickReplyButton: {
